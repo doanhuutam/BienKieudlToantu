@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<table width="50%" >
+	<tr>
+		<td>Amount</td>
+		<td> From Curreny</td>
+		<td>To Currency</td>
+	</tr>
+
+
+	<tr>
+		<td><input type="text" name="hihi" id="money"></td>
+		<td>
+			<select id="op">
+				<option value="VN" >Việt Nam</option>
+				<option value="USA">Usd</option>
+			</select>
+		</td>
+		<td>
+			<select id="opp">
+				<option value="USA">Usd</option>
+				<option value="VN">Việt Nam</option>
+			</select>
+		</td>
+	</tr>
+
+
+
+
+
+	<tr>
+		
+		<td><input type="button" onclick="cdTienTe()" value="Convet"></td>
+
+	</tr>
+	</table>
+
+
+
+
+	<div id="show"></div>
+
+
+
+
+	<script type="text/javascript">
+		function cdTienTe() {
+
+
+			let a =+document.getElementById('money').value;
+			let b =document.getElementById('op').value;
+			let c=document.getElementById('opp').value;
+
+
+
+			if (b==c) {
+				document.getElementById('show').innerText = 'số tiền tương ứng' +a;
+			}
+			if (b=='VN'&&c=='USA') {
+					document.getElementById('show').innerText='số tiền tương ứng'+a/23000;
+				}
+				if (b=='USA'&&c=='VN') {
+						document.getElementById('show').innerText="số tiền tương ứng"+a*23000;
+					}
+		}
+	</script>
+</body>
+</html>

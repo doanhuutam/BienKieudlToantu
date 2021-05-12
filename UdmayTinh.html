@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>MÁT TÍNH</h1>
+	<input type="text" id="t1">
+	<input type="text" id="t2">
+	<button onclick="cong()">Cộng</button>
+	<button onclick="tru()">Trừ </button>
+	<button onclick="nhan()">Nhân</button>
+	<button onclick="chia()">Chia</button>
+	<div id="kq">giá trị trả về</div>
+	<script type="text/javascript">
+		function cong() {
+			let a=+document.getElementById('t1').value;
+			let b=+document.getElementById('t2').value;
+			let c= a+b;
+			document.getElementById('kq').innerHTML=c;
+		}
+		function tru() {
+			let a=+document.getElementById('t1').value;
+			let b=+document.getElementById('t2').value;
+			let c= a-b;
+			document.getElementById('kq').innerHTML=c;
+		}
+		function nhan() {
+			let a=+document.getElementById('t1').value;
+			let b=+document.getElementById('t2').value;
+			let c= a*b;
+			document.getElementById('kq').innerHTML=c;
+		}
+		function chia() {
+			let a=+document.getElementById('t1').value;
+			let b=+document.getElementById('t2').value;
+			let c= a/b;
+			document.getElementById('kq').innerHTML=c;
+		}
+	</script>
+</body>
+</html>
